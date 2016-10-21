@@ -1,6 +1,6 @@
 body
 {
-    background-color: #c55555;
+    background-color: #c5514c;
 }
 
 .quote-author
@@ -30,8 +30,8 @@ body
 .line
 {
     background: black;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
 }
 
 .cl
@@ -41,7 +41,6 @@ body
 
 .quote-style
 {
-    font-family: 'Lato', sans-serif;
     font-family: 'Oleo Script', cursive;
     font-size: 28px;
 }
