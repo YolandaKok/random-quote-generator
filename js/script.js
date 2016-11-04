@@ -3,18 +3,21 @@
  */
 $(document).ready(function() {
     $.getJSON("https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi", function(data) {
-
+    var data = "<p class='quote-style open-quote'>" + response.quote + "</p>";
+    var author = "<p class='author-style'>- " + response.author + "</p>";
+    $(".quote-text").html(data);
+    if(response.author !== '') {
+        $(".quote-author").html(author);
+    }
+    var twit = "<a class='twitter-share-button btn btn-default' href='https://twitter.com/intent/tweet?text="+ response.quote + response.author+"' target='_blank'>" +
+        "<i class='fa fa-twitter fa-lg'></i></a>";
+    $(".twitter").html(twit);
     });
     $(".btn").click(function() {
-        $.ajax({type: "POST",
-            crossDomain : true,
-            url: "https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi",
-            data: {method: "getQuote",format: "jsonp",lang: "en"},
-            dataType: "jsonp",
-            jsonp: "jsonp",
-            jsonpCallback: "myJsonMethod",
-        });
-
+      $.getJSON("https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi", function(data) {
+            
+    });
+        
     });
 
     // on hover to the quote-box a line will appear
