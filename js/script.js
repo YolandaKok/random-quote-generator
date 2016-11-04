@@ -55,7 +55,7 @@ function myJsonMethod(response){
     if(response.author !== '') {
         $(".quote-author").html(author);
     }
-    var twit = "<a class='twitter-share-button btn btn-default' href='https://twitter.com/intent/tweet?text="+ response.quoteText + response.quoteAuthor+"' target='_blank'>" +
+    var twit = "<a class='twitter-share-button btn btn-default' href='https://twitter.com/intent/tweet?text="+ response.quote + response.author+"' target='_blank'>" +
         "<i class='fa fa-twitter fa-lg'></i></a>";
     $(".twitter").html(twit);
 }
