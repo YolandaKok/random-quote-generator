@@ -49,10 +49,10 @@ $(document).ready(function() {
 });
 
 function myJsonMethod(response){
-    var data = "<p class='quote-style open-quote'>" + response.quoteText + "</p>";
-    var author = "<p class='author-style'>- " + response.quoteAuthor + "</p>";
+    var data = "<p class='quote-style open-quote'>" + response.quote + "</p>";
+    var author = "<p class='author-style'>- " + response.author + "</p>";
     $(".quote-text").html(data);
-    if(response.quoteAuthor !== '') {
+    if(response.author !== '') {
         $(".quote-author").html(author);
     }
     var twit = "<a class='twitter-share-button btn btn-default' href='https://twitter.com/intent/tweet?text="+ response.quoteText + response.quoteAuthor+"' target='_blank'>" +
