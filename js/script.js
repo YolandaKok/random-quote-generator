@@ -4,7 +4,7 @@
 $(document).ready(function() {
     $.ajax({type: "GET",
         crossDomain : true,
-        url: "https://crossorigin.me/http://api.forismatic.com/api/1.0/",
+        url: "https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi",
         data: {method: "getQuote",format: "jsonp",lang: "en"},
         dataType: "jsonp",
         jsonp: "jsonp",
@@ -13,7 +13,7 @@ $(document).ready(function() {
     $(".btn").click(function() {
         $.ajax({type: "GET",
             crossDomain : true,
-            url: "https://crossorigin.me/http://api.forismatic.com/api/1.0/",
+            url: "https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi",
             data: {method: "getQuote",format: "jsonp",lang: "en"},
             dataType: "jsonp",
             jsonp: "jsonp",
