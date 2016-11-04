@@ -2,7 +2,7 @@
  * Created by Yolanda on 21/10/2016.
  */
 $(document).ready(function() {
-    $.ajax({type: "GET",
+    $.ajax({type: "POST",
         crossDomain : true,
         url: "https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi",
         data: {method: "getQuote",format: "jsonp",lang: "en"},
@@ -11,7 +11,7 @@ $(document).ready(function() {
         jsonpCallback: "myJsonMethod",
     });
     $(".btn").click(function() {
-        $.ajax({type: "GET",
+        $.ajax({type: "POST",
             crossDomain : true,
             url: "https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi",
             data: {method: "getQuote",format: "jsonp",lang: "en"},
