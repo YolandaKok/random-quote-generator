@@ -2,7 +2,7 @@
  * Created by Yolanda on 21/10/2016.
  */
 $(document).ready(function() {
-    $.ajax({type: "POST",
+    $.ajax({type: "GET",
         crossDomain : true,
         url: "https://crossorigin.me/http://api.forismatic.com/api/1.0/",
         data: {method: "getQuote",format: "jsonp",lang: "en"},
@@ -11,7 +11,7 @@ $(document).ready(function() {
         jsonpCallback: "myJsonMethod",
     });
     $(".btn").click(function() {
-        $.ajax({type: "POST",
+        $.ajax({type: "GET",
             crossDomain : true,
             url: "https://crossorigin.me/http://api.forismatic.com/api/1.0/",
             data: {method: "getQuote",format: "jsonp",lang: "en"},
