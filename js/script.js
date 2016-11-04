@@ -2,16 +2,15 @@
  * Created by Yolanda on 21/10/2016.
  */
 $(document).ready(function() {
-    $.getJSON("https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi", function(data) {
-    var data = "<p class='quote-style open-quote'>" + response.quote + "</p>";
-    var author = "<p class='author-style'>- " + response.author + "</p>";
-    $(".quote-text").html(data);
-    if(response.author !== '') {
-        $(".quote-author").html(author);
-    }
-    var twit = "<a class='twitter-share-button btn btn-default' href='https://twitter.com/intent/tweet?text="+ response.quote + response.author+"' target='_blank'>" +
-        "<i class='fa fa-twitter fa-lg'></i></a>";
-    $(".twitter").html(twit);
+    $.getJSON("https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi", function(response) {
+        var data = "<p class='quote-style open-quote'>" + response.quote + "</p>";
+        var author = "<p class='author-style'>- " + response.author + "</p>";
+        $(".quote-text").html(data);
+        if(response.author !== '') {
+            $(".quote-author").html(author);
+         }
+        var twit = "<a class='twitter-share-button btn btn-default' href='https://twitter.com/intent/tweet?text="+ response.quote + response.author+"' target='_blank'>" +"<i class='fa fa-twitter fa-lg'></i></a>";
+        $(".twitter").html(twit);
     });
     $(".btn").click(function() {
       $.getJSON("https://andruxnet-random-famous-quotes.p.mashape.com/?mashape-key=a8nmq5fxdZmshI0CbuvDc9uATgsVp1L8X6sjsnt4sygwvCpfNi", function(data) {
